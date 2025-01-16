@@ -10,7 +10,7 @@ function App() { // императивный
         <p> {/*декларативный*/}
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a {/*декларативный*/}
+        <a /*декларативный*/
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
