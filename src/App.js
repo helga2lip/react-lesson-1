@@ -1,27 +1,55 @@
+import React from 'react';
 import logo from './logo.svg'; /*декларативный*/
 import './App.css'; /*декларативный*/
 
-function App() { // императивный
-	const currentYear = new Date().getFullYear(); // декларативный
-  return (
-    <div className="App"> {/*декларативный*/}
-      <header className="App-header"> {/*декларативный*/}
-        <img src={logo} className="App-logo" alt="logo" /> {/*декларативный*/}
-        <p> {/*декларативный*/}
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a /*декларативный*/
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-		<div>{currentYear}</div> {/*декларативный*/}
-      </header>
-    </div>
-  );
+function App() {
+	const currentYear = new Date().getFullYear();
+	return (
+		React.createElement( "div",
+			{
+			  className: "App"
+			},
+			React.createElement("header",
+				{
+					className: "App-header"
+				},
+				[
+					React.createElement("img",
+						{
+							className: "App-logo",
+							alt: "logo",
+							src: logo,
+						},
+						null
+					),
+					React.createElement("p",
+						null,
+						[
+							'Edit ',
+							React.createElement("code",
+								null,
+								'src/App.js'
+							),
+							' and save to reload.'
+						 ]
+					),
+					React.createElement("a",
+						{
+							className: "App-link",
+							href: "https://reactjs.org",
+							target: "_blank",
+							rel: "noopener noreferrer",
+						},
+						'Learn React'
+					),
+					React.createElement("div",
+						null,
+						currentYear
+					),
+				]
+			)
+		)
+	)
 }
 
 export default App; /*декларативный*/
